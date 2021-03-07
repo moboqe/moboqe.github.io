@@ -11,6 +11,14 @@ body {
 }
 
 .memory_game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.memory_card {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
