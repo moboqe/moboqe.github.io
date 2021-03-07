@@ -42,6 +42,7 @@ body {
   position: absolute;
   border-radius: 5px;
   background: #1C7CCC;
+  backface-visibility: hidden;
 }
 
 .front_face {
