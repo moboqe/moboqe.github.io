@@ -1,4 +1,4 @@
-let cards = document.querySelectorAll('.memory_card');
+const cards = document.querySelectorAll('.memory_card');
 
 function flipCard() {
   this.classList.toggle('flip');
