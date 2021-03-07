@@ -47,9 +47,9 @@ body {
   height: 100%;
   padding: 20px;
   position: absolute;
-  backface-visibility: hidden;
   border-radius: 5px;
   background: #1C7CCC;
+  backface-visibility: hidden;
 }
 
 .front_face {
