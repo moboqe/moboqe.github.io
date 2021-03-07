@@ -27,9 +27,9 @@ body {
   margin: 5px;
   position: relative;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-  transform: scale(1);
+  transition: all .5s;
   transform-style: preserve-3d;
-  transition: transform .5s;
+  transform: scale(1);
 }
 
 .memory_card.flip {
@@ -37,7 +37,7 @@ body {
 }
 
 .memory_card:active {
-  transform: scale(0.9);
+  transform: scale(0.97);
   transition: transform .2s;
 }
 
@@ -47,11 +47,29 @@ body {
   height: 100%;
   padding: 20px;
   position: absolute;
+  backface-visibility: hidden;
   border-radius: 5px;
   background: #1C7CCC;
-  backface-visibility: hidden;
 }
 
 .front_face {
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 750px) and (max-height: 500px) {
+  .memory_game {
+    width: 50%;
+    height: 90%;
+  }
+
+  .memory_card {
+    width: calc(25% - 8px);
+    height: calc(33.333% - 8px);
+    margin: 4px;
+  }
+
+  .front_face,
+  .back_face {
+    padding: 10px;
+  }
 }
