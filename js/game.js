@@ -29,7 +29,7 @@ function checkForMatch() {
 
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
-  secondCard.removeEventListener('click', flipCard;
+  secondCard.removeEventListener('click', flipCard);
 
   resetBoard();
 }
