@@ -1,16 +1,18 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+header {
+  width: 100%;
+  display: block;
 }
 
 body {
   height: 100vh;
-  display: flex;
+  display: block;
   background: #060AB2;
 }
 
 .memory_game {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   width: 640px;
   height: 640px;
   margin: auto;
@@ -22,6 +24,9 @@ body {
 }
 
 .memory_card {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
@@ -43,6 +48,9 @@ body {
 
 .front_face,
 .back_face {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -72,29 +80,4 @@ body {
   .back_face {
     padding: 10px;
   }
-}
-
-.menu {
-  width: 100%;
-  display: table;
-}
-
-.menu ul {
-  display: table-row;
-}
-
-.menu li {
-  display: table-cell;
-  background: #2767A0;
-}
-
-.menu ul li:hover, .menu a:hover {
-  background: #666;
-}
-
-.menu li a {
-  display: block;
-  padding: 8px 15px;
-  color: #fff;
-  text-align: center;
 }
