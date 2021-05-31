@@ -1,18 +1,12 @@
-header {
-  width: 100%;
-  display: block;
-}
+
 
 body {
-  height: 100vh;
-  display: block;
   background: #060AB2;
 }
 
 .memory_game {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  padding-top: 20px;
   width: 640px;
   height: 640px;
   margin: auto;

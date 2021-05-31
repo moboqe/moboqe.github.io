@@ -1,4 +1,6 @@
 const cards = document.querySelectorAll('.memory_card');
+const cardsCount = cards.length;
+let cardsPair = cardsCount / 2;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -7,9 +9,7 @@ let firstCard, secondCard;
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
-
   this.classList.add('flip');
-
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
@@ -20,11 +20,25 @@ function flipCard() {
   lockBoard = true;
 
   checkForMatch();
+
+  if (cardsPair === 0) {
+    setTimeout(() =>
+      alert("Молодец! Все пары собраны!"), 2000);
+  }
+
 }
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    disableCards();
+    cardsPair--;
+  } else unflipCards();
+}
+
+function checkPairs() {
+
+
 }
 
 function disableCards() {
@@ -55,5 +69,10 @@ function resetBoard() {
     card.style.order = ramdomPos;
   });
 })();
+
+function sleep(miliseconds) {
+  let currentTime = new Date().getTime();
+  while (currentTime + miliseconds >= new Date().getTime()) {}
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
